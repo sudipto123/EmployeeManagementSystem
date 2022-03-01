@@ -10,7 +10,7 @@ namespace EmployeeManagement.Models
     {
         public int Id { get; set; }
         [Required]
-        [MaxLength(5, ErrorMessage = "Name can not exceed 50 characters")]
+        [MaxLength(50, ErrorMessage = "Name can not exceed 50 characters")]
         public string Name { get; set; }
         [Required]
         [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", 

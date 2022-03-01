@@ -34,8 +34,8 @@ namespace EmployeeManagement.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -46,15 +46,15 @@ namespace EmployeeManagement.Migrations
                         {
                             Id = 1,
                             Department = 2,
-                            Email = "mary@pragimtech.com",
-                            Name = "Mary"
+                            Email = "sudipto@pragimtech.com",
+                            Name = "Sudipto"
                         },
                         new
                         {
                             Id = 2,
                             Department = 1,
-                            Email = "john@pragimtech.com",
-                            Name = "John"
+                            Email = "pradipto@pragimtech.com",
+                            Name = "Pradipto"
                         });
                 });
 #pragma warning restore 612, 618

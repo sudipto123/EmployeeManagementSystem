@@ -22,16 +22,16 @@ namespace EmployeeManagement.Models
                 new Employee
                 {
                     Id = 1,
-                    Name = "Mary",
+                    Name = "Sudipto",
                     Department = Dept.IT,
-                    Email = "mary@pragimtech.com"
+                    Email = "sudipto@pragimtech.com"
                 },
                 new Employee
                 {
                     Id = 2,
-                    Name = "John",
+                    Name = "Pradipto",
                     Department = Dept.HR,
-                    Email = "john@pragimtech.com"
+                    Email = "pradipto@pragimtech.com"
                 }
             );
         }

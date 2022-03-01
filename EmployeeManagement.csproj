@@ -16,6 +16,8 @@
     <Compile Remove="Migrations\20220301061432_SeedEmployeesTable.Designer.cs" />
     <Compile Remove="Migrations\20220301064305_SeedEmployeesTable.cs" />
     <Compile Remove="Migrations\20220301064305_SeedEmployeesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220301065725_SeedEmployeesTable.cs" />
+    <Compile Remove="Migrations\20220301065725_SeedEmployeesTable.Designer.cs" />
     <Compile Remove="Migrations\20220301080237_AlterEmployee.cs" />
     <Compile Remove="Migrations\20220301080237_AlterEmployee.Designer.cs" />
     <Compile Remove="Migrations\20220301080609_AlterEmployees.cs" />
@@ -24,6 +26,20 @@
     <Compile Remove="Migrations\20220301080825_AlterEmployeesSeedData.Designer.cs" />
     <Compile Remove="Migrations\20220301081048_AlterEmployeesSeedData.cs" />
     <Compile Remove="Migrations\20220301081048_AlterEmployeesSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20220301081237_AlterEmployeesSeedData.cs" />
+    <Compile Remove="Migrations\20220301081237_AlterEmployeesSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20220301081528_AddEmployee.cs" />
+    <Compile Remove="Migrations\20220301081528_AddEmployee.Designer.cs" />
+    <Compile Remove="Migrations\20220301081624_AddEmployee.cs" />
+    <Compile Remove="Migrations\20220301081624_AddEmployee.Designer.cs" />
+    <Compile Remove="Migrations\20220301081805_AddEmployee.cs" />
+    <Compile Remove="Migrations\20220301081805_AddEmployee.Designer.cs" />
+    <Compile Remove="Migrations\20220301081849_AddEmployee.cs" />
+    <Compile Remove="Migrations\20220301081849_AddEmployee.Designer.cs" />
+    <Compile Remove="Migrations\20220301082243_AlterEmployeesSeedData.cs" />
+    <Compile Remove="Migrations\20220301082243_AlterEmployeesSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20220301082613_AlterEmployeesSeedData.cs" />
+    <Compile Remove="Migrations\20220301082613_AlterEmployeesSeedData.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
