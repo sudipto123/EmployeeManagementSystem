@@ -42,6 +42,14 @@
     <Compile Remove="Migrations\20220301082613_AlterEmployeesSeedData.Designer.cs" />
     <Compile Remove="Migrations\20220301082949_AlterEmployeesSeedData.cs" />
     <Compile Remove="Migrations\20220301082949_AlterEmployeesSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20220301105618_AddPhotoPathColumn.cs" />
+    <Compile Remove="Migrations\20220301105618_AddPhotoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20220301110615_AddSomeProperty.cs" />
+    <Compile Remove="Migrations\20220301110615_AddSomeProperty.Designer.cs" />
+    <Compile Remove="Migrations\20220301111058_AddPhotoPathColumn.cs" />
+    <Compile Remove="Migrations\20220301111058_AddPhotoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20220301111228_AddSomeProperty.cs" />
+    <Compile Remove="Migrations\20220301111228_AddSomeProperty.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
