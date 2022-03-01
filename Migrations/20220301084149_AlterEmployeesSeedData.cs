@@ -18,12 +18,17 @@ namespace EmployeeManagement.Migrations
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "Id", "Department", "Email", "Name" },
-                values: new object[] { 1, 2, "sudipto@pragimtech.com", "Sudipto" });
+                values: new object[] { 1, 2, "sudipto@gmail.com", "Sudipto" });
 
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "Id", "Department", "Email", "Name" },
-                values: new object[] { 2, 1, "pradipto@pragimtech.com", "Pradipto" });
+                values: new object[] { 2, 1, "pradipto@gmail.com", "Pradipto" });
+
+            migrationBuilder.InsertData(
+                table: "Employees",
+                columns: new[] { "Id", "Department", "Email", "Name" },
+                values: new object[] { 3, 1, "puneet@gmail.com", "Puneet" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -37,6 +42,11 @@ namespace EmployeeManagement.Migrations
                 table: "Employees",
                 keyColumn: "Id",
                 keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Employees",
+                keyColumn: "Id",
+                keyValue: 3);
 
             migrationBuilder.AlterColumn<string>(
                 name: "Name",

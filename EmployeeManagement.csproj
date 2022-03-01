@@ -40,6 +40,8 @@
     <Compile Remove="Migrations\20220301082243_AlterEmployeesSeedData.Designer.cs" />
     <Compile Remove="Migrations\20220301082613_AlterEmployeesSeedData.cs" />
     <Compile Remove="Migrations\20220301082613_AlterEmployeesSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20220301082949_AlterEmployeesSeedData.cs" />
+    <Compile Remove="Migrations\20220301082949_AlterEmployeesSeedData.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

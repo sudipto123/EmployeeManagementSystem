@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220301082949_AlterEmployeesSeedData")]
+    [Migration("20220301084149_AlterEmployeesSeedData")]
     partial class AlterEmployeesSeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,15 +48,22 @@ namespace EmployeeManagement.Migrations
                         {
                             Id = 1,
                             Department = 2,
-                            Email = "sudipto@pragimtech.com",
+                            Email = "sudipto@gmail.com",
                             Name = "Sudipto"
                         },
                         new
                         {
                             Id = 2,
                             Department = 1,
-                            Email = "pradipto@pragimtech.com",
+                            Email = "pradipto@gmail.com",
                             Name = "Pradipto"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Department = 1,
+                            Email = "puneet@gmail.com",
+                            Name = "Puneet"
                         });
                 });
 #pragma warning restore 612, 618

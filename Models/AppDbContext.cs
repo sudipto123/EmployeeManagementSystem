@@ -18,22 +18,7 @@ namespace EmployeeManagement.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employee>().HasData(
-                new Employee
-                {
-                    Id = 1,
-                    Name = "Sudipto",
-                    Department = Dept.IT,
-                    Email = "sudipto@pragimtech.com"
-                },
-                new Employee
-                {
-                    Id = 2,
-                    Name = "Pradipto",
-                    Department = Dept.HR,
-                    Email = "pradipto@pragimtech.com"
-                }
-            );
+            modelBuilder.Seed();
         }
     }
 }
