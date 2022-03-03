@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace EmployeeManagement
 {
@@ -28,6 +29,10 @@ namespace EmployeeManagement
         {
             services.AddDbContextPool<AppDbContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("EmployeeDBConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                        .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlDataContractSerializerFormatters();
             
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
@@ -49,6 +54,8 @@ namespace EmployeeManagement
             }
             app.UseStaticFiles();
             //app.UseMvcWithDefaultRoute();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
