@@ -13,7 +13,6 @@ namespace EmployeeManagement.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-
         public AccountController(UserManager<IdentityUser> userManager,
                                 SignInManager<IdentityUser> signInManager)
         {
@@ -67,7 +66,7 @@ namespace EmployeeManagement.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnurl)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +74,14 @@ namespace EmployeeManagement.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("index", "home");
+                    if (!string.IsNullOrEmpty(returnurl))
+                    {
+                        return Redirect(returnurl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("index", "home");
+                    }                    
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
