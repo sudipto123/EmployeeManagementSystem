@@ -1,5 +1,6 @@
 ﻿using EmployeeManagement.Models;
 using EmployeeManagement.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -25,14 +27,14 @@ namespace EmployeeManagement.Controllers
             this.hostingEnvironment = hostingEnvironment;
             this.logger = logger;
         }
-
+        [AllowAnonymous]
         public ViewResult Index()
         {
             var model = _employeeRepository.GetAllEmployees();
             ViewBag.Title = "Employee List";
             return View(model);
         }
-
+        [AllowAnonymous]
         public ViewResult Details(int? Id)
         {
             //throw new Exception("Error in Details View");
@@ -59,7 +61,7 @@ namespace EmployeeManagement.Controllers
             ViewBag.Title = "Employee Details";
             return View(homeDetailsViewModel);
         }
-        [HttpGet]
+        [HttpGet]        
         public ViewResult Create()
         {
             return View();
