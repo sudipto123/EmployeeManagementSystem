@@ -74,7 +74,7 @@ namespace EmployeeManagement.Controllers
 
                 if (result.Succeeded)
                 {
-                    if (!string.IsNullOrEmpty(returnurl))
+                    if (!string.IsNullOrEmpty(returnurl) && Url.IsLocalUrl(returnurl))
                     {
                         return Redirect(returnurl);
                     }
