@@ -50,6 +50,8 @@
     <Compile Remove="Migrations\20220301111058_AddPhotoPathColumn.Designer.cs" />
     <Compile Remove="Migrations\20220301111228_AddSomeProperty.cs" />
     <Compile Remove="Migrations\20220301111228_AddSomeProperty.Designer.cs" />
+    <Compile Remove="Migrations\20220305063856_Extend_IdentityUser.cs" />
+    <Compile Remove="Migrations\20220305063856_Extend_IdentityUser.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
