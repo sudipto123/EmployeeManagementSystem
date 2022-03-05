@@ -12,6 +12,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace EmployeeManagement
 {
@@ -35,9 +37,18 @@ namespace EmployeeManagement
                 {
                     options.Password.RequiredLength = 10;
                     options.Password.RequiredUniqueChars = 3;
-                }).AddEntityFrameworkStores<AppDbContext>();            
+                }).AddEntityFrameworkStores<AppDbContext>();
 
-            services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlDataContractSerializerFormatters();
+            //services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlDataContractSerializerFormatters();
+
+            services.AddMvc(option =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .Build();
+                option.Filters.Add(new AuthorizeFilter(policy));
+                option.EnableEndpointRouting = false;
+            }).AddXmlSerializerFormatters();
             
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
             //services.AddScoped<IEmployeeRepository, MockEmployeeRepository>();
