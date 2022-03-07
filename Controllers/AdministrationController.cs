@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace EmployeeManagement.Controllers
 { 
     [Authorize(Roles = "Admin")]
-    [Authorize(Roles = "User")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
